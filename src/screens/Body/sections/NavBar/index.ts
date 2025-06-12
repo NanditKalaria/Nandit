@@ -1,0 +1,1 @@
+export { BannerByAnima } from "./NavBar";
