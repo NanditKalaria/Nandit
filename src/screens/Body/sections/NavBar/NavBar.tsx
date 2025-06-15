@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Moon, Sun } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "../../../../components/ThemeProvider";
 import {
   NavigationMenu,
@@ -11,6 +11,7 @@ import {
 
 export const BannerByAnima = (): JSX.Element => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   // Navigation links data for easy mapping
@@ -23,12 +24,12 @@ export const BannerByAnima = (): JSX.Element => {
 
   return (
     <motion.header 
-      className="w-full flex justify-center pt-10 pb-4"
+      className="w-full flex justify-center pt-10 pb-4 relative"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="w-full max-w-[1215px] flex justify-between items-center px-8">
+      <div className="w-full max-w-[1215px] flex justify-between items-center px-8 relative">
         {/* Logo container with animation and home link */}
         <motion.div 
           className="flex items-center"
@@ -50,8 +51,8 @@ export const BannerByAnima = (): JSX.Element => {
           </motion.a>
         </motion.div>
 
-        {/* Navigation menu with hover effects */}
-        <NavigationMenu className="max-w-[505px]">
+        {/* Desktop Navigation */}
+        <NavigationMenu className="hidden md:block max-w-[505px]">
           <NavigationMenuList className="flex gap-8">
             {navigationLinks.map((link, index) => (
               <NavigationMenuItem key={index}>
@@ -86,19 +87,66 @@ export const BannerByAnima = (): JSX.Element => {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-        
-        <motion.button
+
+        {/* Mobile Menu Button */}
+        <div className="flex items-center gap-4">
+          <motion.button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             {theme === 'dark' ? (
-              <Sun className="w-5 h-5 text-huggingfacecoblack " />
+              <Sun className="w-5 h-5 text-huggingfacecoblack" />
             ) : (
               <Moon className="w-5 h-5 text-huggingfacecoblack dark:text-huggingfacecowhite" />
             )}
-        </motion.button>
+          </motion.button>
+
+          <motion.button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6 text-huggingfacecoblack " />
+            ) : (
+              <Menu className="w-6 h-6 text-huggingfacecoblack " />
+            )}
+          </motion.button>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 shadow-lg rounded-lg mt-2 py-4 px-4 md:hidden z-50 border border-gray-200 dark:border-gray-700"
+            >
+              <nav className="flex flex-col space-y-3">
+                {navigationLinks.map((link, index) => (
+                  <motion.a
+                    key={index}
+                    href={link.href}
+                    target={link.href.startsWith('http') ? '_blank' : '_self'}
+                    rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="text-huggingfacecoblack hover:text-[rgba(255,94,105,1)] transition-colors text-lg font-medium py-2 px-3 rounded-md hover:bg-gray-50"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </motion.a>
+                ))}
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.header>
   );
