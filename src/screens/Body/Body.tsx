@@ -32,7 +32,7 @@ export const Body = (): JSX.Element => {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-background-light dark:bg-background-dark text-huggingfacecoblack dark:text-huggingfacecowhite relative">
+    <div className="flex flex-col w-full bg-background-light dark:bg-background-dark text-huggingfacecoblack dark:text-huggingfacecowhite relative overflow-x-hidden">
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[rgba(177,108,234,1)] via-[rgba(255,94,105,1)] to-[rgba(255,168,75,1)] transform origin-left z-50"
         style={{ scaleX }}
