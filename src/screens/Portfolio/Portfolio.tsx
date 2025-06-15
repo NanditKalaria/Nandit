@@ -1,34 +1,38 @@
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { BannerByAnima } from "../Body/sections/NavBar/NavBar";
 import ProjectCard from '../../components/ProjectCard';
+import quicklearnAiImg from '../../assets/projects/quicklearn-ai.png';
+import neuralFlowImg from '../../assets/projects/neuralflow.png';
+import bunkerBabaImg from '../../assets/projects/bunker-baba.png';
+import chessImg from '../../assets/projects/chess.png';
 
 // Update projects data with your projects
 const projects = [
     {
         category: "QuickLearnAI",
         title: "AI-Powered Learning Assistant",
-        image: "src/assets/projects/quicklearn-ai.png", // Add your project image
+        image: quicklearnAiImg,
         description: "Educational platform using LangChain and MERN stack",
         href: "https://youtu.be/y3qxYzujYoc",
     },
     {
         category: "Neural Flow",
         title: "Complete AI Automation",
-        image: "src/assets/projects/neuralflow.png", // Add your project image
+        image: neuralFlowImg, // Add your project image
         description: "AI automation from Jira tasks to deployed links",
         href: "https://youtu.be/jItTasCJciE",
     },
     {
         category: "Bunker Baba",
         title: "Bunk Calculation Tool",
-        image: "src/assets/projects/bunker-baba.png", // Add your project image
+        image: bunkerBabaImg, // Add your project image
         description: "OCR-based attendance tracking system",
         href: "https://bunker-baba.netlify.app/",
     },
     {
         category: "The Java Rook",
         title: "Chess Game Implementation",
-        image: "src/assets/projects/chess.jpeg", // Add your project image
+        image: chessImg, // Add your project image
         description: "Java-based chess game with core OOP concepts",
         href: "https://github.com/prem048/The-Java-Rook",
     },
