@@ -17,18 +17,21 @@ const projects = [
         category: "AI Education",
         title: "QuickLearnAI\nAI-Powered Learning Assistant",
         image: quicklearnAiImg,
+        href: "https://youtu.be/y3qxYzujYoc",
     },
     {
         id: 2,
         category: "Education Tools",
         title: "Bunker Baba\nBunk Calculator",
         image: bunkerBabaImg,
+        href: "https://bunker-baba.netlify.app/",
     },
     {
         id: 3,
         category: "Game Development",
         title: "The Java Rook\nChess Implementation",
         image: chessImg,
+        href: "https://github.com/prem048/The-Java-Rook",
     },
 ];
 
@@ -79,6 +82,7 @@ export const DivWrapperByAnima = (): JSX.Element => {
                                 className="relative overflow-hidden rounded-xl group cursor-pointer h-[400px]"
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
+                                onClick={() => window.open(project.href, '_blank')}
                             >
                                 <img
                                     src={project.image}
