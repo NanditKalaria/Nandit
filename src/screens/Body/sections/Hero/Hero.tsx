@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../../../../components/ui/button";
+import profileImg from "../../../../assets/projects/portfolio.png"; // Import the image
 
 export const ContainerByAnima = (): JSX.Element => {
   const { scrollY } = useScroll();
@@ -111,7 +112,7 @@ export const ContainerByAnima = (): JSX.Element => {
             transition={{ duration: 0.3 }}
           >
             <img 
-              src="src/assets/icons/portfolio.jpeg"
+              src={profileImg}
               alt="Profile"
               className="w-full h-full object-cover rounded-full"
             />
