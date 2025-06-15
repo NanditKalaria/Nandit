@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { BadgeCheck, Trophy, Medal } from "lucide-react";
 
+// Import images
+import gec1Img from '../../../../assets/icons/gec1.png';
+import cvmuImg from '../../../../assets/icons/cvmu.png';
+import yorkieImg from '../../../../assets/icons/yorkie.png';
+import hackspireImg from '../../../../assets/icons/hackspire.png';
+
 interface Achievement {
   title: string;
   description: string;
@@ -17,7 +23,7 @@ const achievements: Achievement[] = [
       "Won first place in Open Innovation Category, competing against 78 teams out of 188",
     date: "Feb 2025",
     icon: <Trophy className="w-6 h-6" />,
-    image: "src/assets/icons/gec1.jpeg",
+    image: gec1Img,
     color: "from-[rgba(177,108,234,1)] to-[rgba(255,94,105,1)]",
   },
   {
@@ -26,7 +32,7 @@ const achievements: Achievement[] = [
       "Secured second place at CVM University Hackathon with an AI-Powered project, QuickLearnAI.",
     date: "Feb 2025",
     icon: <Trophy className="w-6 h-6" />,
-    image: "src/assets/icons/cvmu.jpg",
+    image: cvmuImg,
     color: "from-[rgba(255,94,105,1)] to-[rgba(255,168,75,1)]",
   },
   {
@@ -35,7 +41,7 @@ const achievements: Achievement[] = [
       "Secured Runners-Up position at York.IE Hackathon 2025, with complete AI automation from Jira Tasks to Deployed Links.",
     date: "May 2025",
     icon: <BadgeCheck className="w-6 h-6" />,
-    image: "src/assets/icons/yorkie.jpeg",
+    image: yorkieImg,
     color: "from-[rgba(177,108,234,1)] to-[rgba(255,168,75,1)]",
   },
   {
@@ -44,7 +50,7 @@ const achievements: Achievement[] = [
       "Achieved top 5 placement in HackSpire 2025 Hackathon, showcasing creative problem-solving and technical expertise among tough competitors.",
     date: "April 2025",
     icon: <Medal className="w-6 h-6" />,
-    image: "src/assets/icons/hackspire.png",
+    image: hackspireImg,
     color: "from-[rgba(255,168,75,1)] to-[rgba(177,108,234,1)]",
   }
 ];
