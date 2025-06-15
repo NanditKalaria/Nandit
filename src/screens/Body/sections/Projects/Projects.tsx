@@ -7,25 +7,28 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "../../../../components/ui/carousel";
+import quicklearnAiImg from "../../../../assets/projects/quicklearn-ai.png";
+import bunkerBabaImg from "../../../../assets/projects/bunker-baba.png";
+import chessImg from "../../../../assets/projects/chess.png";
 
 const projects = [
     {
         id: 1,
         category: "AI Education",
         title: "QuickLearnAI\nAI-Powered Learning Assistant",
-        image: "src/assets/projects/quicklearn-ai.png",
+        image: quicklearnAiImg,
     },
     {
         id: 2,
         category: "Education Tools",
         title: "Bunker Baba\nBunk Calculator",
-        image: "src/assets/projects/bunker-baba.png",
+        image: bunkerBabaImg,
     },
     {
         id: 3,
         category: "Game Development",
         title: "The Java Rook\nChess Implementation",
-        image: "src/assets/projects/chess.jpeg",
+        image: chessImg,
     },
 ];
 
