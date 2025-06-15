@@ -54,14 +54,14 @@ const cardHoverVariants = {
 export const DivByAnima = (): JSX.Element => {
 	return (
 		<motion.section
-			className="flex flex-col w-full items-center py-16"
+			className="w-full py-24 px-4 md:px-12 flex justify-center overflow-hidden"
 			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
+			animate={{ opacity: 1 }}
 			transition={{ duration: 0.6 }}
 			viewport={{ once: true }}
 		>
 			<div className="relative max-w-[1215px] w-full">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 					{/* Work Experience Column */}
 					<motion.div
 						className="flex flex-col"
