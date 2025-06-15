@@ -20,10 +20,9 @@ export const ParagraphByAnima = (): JSX.Element => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        For 8 years, I have helped companies—from startups to Fortune 10—build
-        digital products that engage users and fuel
+        For last few months, I have built products and projects specially dedicated to developer students
+        which has helped them throughout in their journey of learning and growing.
         <br />
-        business growth.
       </motion.p>
     </section>
   );
