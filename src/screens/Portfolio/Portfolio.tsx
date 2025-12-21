@@ -13,7 +13,7 @@ const projects = [
         title: "AI-Powered Learning Assistant",
         image: quicklearnAiImg,
         description: "Educational platform using LangChain and MERN stack",
-        href: "https://youtu.be/y3qxYzujYoc",
+        href: "https://quicklearn.ai.in",
     },
     {
         category: "Neural Flow",
@@ -54,7 +54,7 @@ export const Portfolio = (): JSX.Element => {
         },
         {
             text: "Resume",
-            href: "https://drive.google.com/file/d/1Neoog7Qk0GZC-XA8JYzVTsff58GS4VFm/view?usp=drive_link",
+            href: "https://drive.google.com/file/d/17FjjievIZF1YnCUlhZc6xAALg9AlFhAF/view",
         },
     ];
 

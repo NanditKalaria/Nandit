@@ -16,7 +16,7 @@ const projects = [
         category: "AI Education",
         title: "QuickLearnAI\nAI-Powered Learning Assistant",
         image: quicklearnAiImg,
-        href: "https://youtu.be/y3qxYzujYoc",
+        href: "https://quicklearn.ai.in",
     },
     {
         id: 2,
