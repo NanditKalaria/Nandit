@@ -27,7 +27,7 @@ export const Body = (): JSX.Element => {
     },
     {
       text: "Resume",
-      href: "https://drive.google.com/file/d/1Neoog7Qk0GZC-XA8JYzVTsff58GS4VFm/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/17FjjievIZF1YnCUlhZc6xAALg9AlFhAF/view",
     },
   ];
 

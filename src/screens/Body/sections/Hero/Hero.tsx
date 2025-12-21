@@ -9,7 +9,7 @@ export const ContainerByAnima = (): JSX.Element => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0.8]);
 
   const handleResumeClick = () => {
-    window.location.href = "https://drive.google.com/file/d/1Neoog7Qk0GZC-XA8JYzVTsff58GS4VFm/view?usp=drive_link";
+    window.location.href = "https://drive.google.com/file/d/17FjjievIZF1YnCUlhZc6xAALg9AlFhAF/view";
   };
 
   return (

@@ -4,7 +4,7 @@ export const Footer = () => {
   const footerLinks = [
     { text: "GitHub", href: "https://github.com/nandit27" },
     { text: "LinkedIn", href: "https://www.linkedin.com/in/nandit-kalaria-06281631a" },
-    { text: "Resume", href: "https://drive.google.com/file/d/1Neoog7Qk0GZC-XA8JYzVTsff58GS4VFm/view?usp=drive_link" },
+    { text: "Resume", href: "https://drive.google.com/file/d/17FjjievIZF1YnCUlhZc6xAALg9AlFhAF/view" },
   ];
 
   return (
